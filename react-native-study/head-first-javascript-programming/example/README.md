@@ -1,0 +1,1 @@
+This is a solution about [this problem](http://github.com/FrancescoJo/fj-exercises/tree/master/react-native-study/js-example).
