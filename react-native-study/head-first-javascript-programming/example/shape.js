@@ -21,9 +21,7 @@ function Shape(pointArr) {
 
     // check validation of pointArr
     for (var i = 0; i < pointArr.length; ++i) {
-        if (pointArr[i] instanceof Point) {
-            
-        } else {
+        if (!pointArr[i] instanceof Point) {
             throw new TypeError("Construction failed, pointArr[ + " + i + "] is not a Point object.");
         }
     }
@@ -36,6 +34,7 @@ function Shape(pointArr) {
     for (var i = 0; i < this.vertices.length; ++i) {
         this.vectorOfVertices.push(
             new Vector(new Point(pointArr[j].x, pointArr[j].y), new Point(pointArr[i].x, pointArr[i].y)));
+        j = i;
     }
 }
 
