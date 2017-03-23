@@ -4,7 +4,6 @@ import {
     Text, View
 } from 'react-native';
 
-
 // Make a component
 const Header = (props) => {
     const { textStyle, viewStyle } = styles;
@@ -15,6 +14,7 @@ const Header = (props) => {
     );
 };
 
+// styles
 const styles = {
     viewStyle: {
         alignItems: 'center',
