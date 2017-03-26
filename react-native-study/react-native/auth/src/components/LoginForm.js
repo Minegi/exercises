@@ -82,7 +82,7 @@ const styles = {
         fontSize: 20,
         alignSelf: 'center',
         color: 'red',
-
+        position: 'relative',
     }
 };
 
