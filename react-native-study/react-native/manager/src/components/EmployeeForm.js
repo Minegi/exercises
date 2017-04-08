@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, Picker } from 'react-native';
 import { connect } from 'react-redux';
-import { employeeUpdate } from '../actions';
+import { employeeUpdate, clearEmployeeForm } from '../actions';
 import { CardSection, Input } from './common';
 
 class EmployeeForm extends Component {
+    componentWillUnmount() {
+        this.props.clearEmployeeForm();
+    }
+
     render() {
         return (
             <View>
@@ -58,4 +62,4 @@ const mapStateToProps = (state) => {
     return { name, phone, shift };
 };
 
-export default connect(mapStateToProps, { employeeUpdate })(EmployeeForm);
+export default connect(mapStateToProps, { employeeUpdate, clearEmployeeForm })(EmployeeForm);
